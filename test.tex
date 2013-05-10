@@ -1,0 +1,83 @@
+\documentclass[11pt,addpoints]{exam}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T2A,T1]{fontenc}
+\usepackage{amsmath}
+\usepackage[english,bulgarian]{babel}
+
+\makeatletter
+
+\newcounter{points}
+\def\vsolword#1{\def\@vsolword{#1}}
+
+\def\@ansloop{
+  \stepcounter{question}
+  \ref{question@\arabic{question}} & & & \pointsofquestion{\arabic{question}} \\
+  \hline
+  \ifnum \value{question} < \numquestions\relax
+    \@ansloop
+  \fi
+}
+
+\def\soltable{
+  \begin{tabular}{|c|c||c|c|}
+    \hline
+    {\@vqword} & {\@vsolword} & {\@vsword} & {\@vpword} \\
+    \hline
+    \setcounter{points}{0}
+    \setcounter{question}{0}
+    \@ansloop
+
+    \multicolumn{1}{c|}{} & {\@vtword} & & {\numpoints} \\ \cline{2-4}
+  \end{tabular}%
+}
+
+\makeatother
+
+\vqword{Въпрос №}
+\vsolword{Отговор(и)}
+\vsword{Резултат}
+\vpword{Макс. точки}
+\vtword{Общо:}
+
+\begin{document}
+
+\pagestyle{headandfoot}
+\firstpageheader
+  {\large\bfseries Компютърни мрежи\\15 юли 2013}
+  {}
+  {Факултетен №:\enspace\makebox[2cm]{\dotfill},
+    поток:\enspace\makebox[1cm]{\dotfill},
+    група:\enspace\makebox[1cm]{\dotfill}\\
+    Име:\enspace\makebox[8.8cm]{\dotfill}}
+
+\firstpagefooter{}{}{}
+
+\section*{Инструкции}
+
+\begin{itemize}
+\item Разполагате с 90 минути за работа.
+\item Попълнете верните отговори на въпросите в колоната "`\textbf{Отговор(и)}"'
+  и оставете колоната "`Резултат"' празна. Ще бъде преглеждана \emph{единствено}
+  таблицата за оценяване.
+\item Всеки нечетим или двусмислен отговор се счита за грешен.
+\item Корекциите на отговори са позволени, стига да се спазва горното правило.
+\end{itemize}
+
+\section*{Таблица за оценяване}
+
+\begin{center}
+  \soltable
+\end{center}
+
+\cleardoublepage
+
+\section*{Въпроси}
+
+\begin{questions}
+
+  % input questions here
+
+\end{questions}
+
+\end{document}
