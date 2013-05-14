@@ -1,41 +1,14 @@
-\documentclass[11pt,addpoints,twoside]{exam}
+\documentclass[11pt]{exam}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T2A,T1]{fontenc}
 \usepackage{amssymb,amsmath}
 \usepackage[english,bulgarian]{babel}
-
-\makeatletter
-
-\newcounter{points}
-\def\vsolword#1{\def\@vsolword{#1}}
-
-\def\@ansloop{
-  \stepcounter{question}
-  \ref{question@\arabic{question}} & & & \pointsofquestion{\arabic{question}} \\
-  \hline
-  \ifnum \value{question} < \numquestions\relax
-    \@ansloop
-  \fi
-}
-
-\def\soltable{
-  \begin{tabular}{|c|c||c|c|}
-    \hline
-    {\@vqword} & {\@vsolword} & {\@vsword} & {\@vpword} \\
-    \hline
-    \setcounter{points}{0}
-    \setcounter{question}{0}
-    \@ansloop
-
-    \multicolumn{1}{c|}{} & {\@vtword} & & {\numpoints} \\ \cline{2-4}
-  \end{tabular}%
-}
-
-\makeatother
+\usepackage{tikz}
+\usetikzlibrary{chains}
+\usepackage{epstopdf}
 
 \vqword{Въпрос №}
-\vsolword{Отговор(и)}
 \vsword{Резултат}
 \vpword{Макс. точки}
 \vtword{Общо:}
@@ -44,18 +17,16 @@
 
 \pagestyle{headandfoot}
 \firstpageheader
-  {\large\bfseries Компютърни мрежи\\--date--}
+  {\large\bfseries Компютърни мрежи\\14.05.2013 г.}
   {}
   {Факултетен №:\enspace\makebox[2cm]{\dotfill},
     поток:\enspace\makebox[1cm]{\dotfill},
     група:\enspace\makebox[1cm]{\dotfill}\\
     Име:\enspace\makebox[8.8cm]{\dotfill}}
 
-\firstpagefooter{}{\small{\emph{Вариант № --variant--}}}{}
+\firstpagefooter{}{}{}
+\footer{}{}{}
 
-\input{instructions}
-\input{grading_table}
-\cleardoublepage
 
 \input{questions}
 
