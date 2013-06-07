@@ -2,6 +2,33 @@
 
 \begin{questions}
 
+  \question[6] На кой слой от седемслойния OSI модел или петслойния BSD модел
+  работят маршрутизаторите?
+  \begin{oneparchoices}
+    \choice 1
+    \choice 2
+    \CorrectChoice 3
+    \choice 4
+    \choice 5
+  \end{oneparchoices}
+
+  \question[10] Кое от следните не е правилно разделяне на мрежата
+  \texttt{10.0.0.0/22} на три подмрежи?
+
+  \question[6] UDP добавя поле за порт, чиято дължина е:
+  \begin{oneparchoices}
+    \CorrectChoice 8 бита.
+    \choice 9 бита.
+    \choice 12 бита.
+    \choice 16 бита
+    \choice 18 бита.
+  \end{oneparchoices}
+
+  \begin{choices}
+    \choice \texttt{10.0.0.0/24}, \texttt{10.0.1.0/24}, \texttt{10.0.2.0/23}
+    \CorrectChoice \texttt{10.0.0.0/23}, \texttt{10.0.2.0/24}, \texttt{10.0.3.0/24}
+    \choice \texttt{10.0.0.0/24}, \texttt{10.0.1.0/23}, \texttt{10.0.3.0/24}
+  \end{choices}
 
   \question[6] На кой слой от седемслойния OSI модел или петслойния BSD модел
   работят комутаторите (\foreignlanguage{english}{switches})
@@ -19,58 +46,6 @@
     \choice Диагностика на мрежови проблеми.
     \choice Комуникация между автономни системи (AS).
     \CorrectChoice Размяна на маршрути.
-  \end{choices}
-
-  \question[6] Маршрутната таблица съдържа: (изберете един верен отговор)
-  \begin{choices}
-    \choice съответствия между IP и MAC адреси
-    \choice списък с всички MAC адреси на системи, с които хостът е разменял
-    рамки
-    \CorrectChoice списък на пътищата към IP мрежите, с които хостът може да
-    разменя IP пакети
-    \choice списък на всички IP aдреси, с които хостът е разменял IP пакети
-  \end{choices}
-
-  \question[6] На кой слой от седемслойния OSI модел или петслойния BSD модел
-  работят маршрутизаторите?
-  \begin{oneparchoices}
-    \choice 1
-    \choice 2
-    \CorrectChoice 3
-    \choice 4
-    \choice 5
-  \end{oneparchoices}
-
-  \question[6] UDP добавя поле за порт, чиято дължина е:
-  \begin{oneparchoices}
-    \CorrectChoice 8 бита.
-    \choice 9 бита.
-    \choice 12 бита.
-    \choice 16 бита
-    \choice 18 бита.
-  \end{oneparchoices}
-
-  \question[10] Кое от следните не е правилно разделяне на мрежата
-  \texttt{10.0.0.0/22} на три подмрежи?
-
-  \begin{choices}
-    \choice \texttt{10.0.0.0/24}, \texttt{10.0.1.0/24}, \texttt{10.0.2.0/23}
-    \CorrectChoice \texttt{10.0.0.0/23}, \texttt{10.0.2.0/24}, \texttt{10.0.3.0/24}
-    \choice \texttt{10.0.0.0/24}, \texttt{10.0.1.0/23}, \texttt{10.0.3.0/24}
-  \end{choices}
-
-  \question[6] BGP e:
-  \begin{choices}
-    \choice протокол, използван за комуникация с най-близкия комутатор в
-    локалната мрежа.
-
-    \choice IGP протокол.
-
-    \CorrectChoice протокол за динамична маршрутизация, основно използван от
-    маршрутизаторите, седящи на границата между Интернет
-    (\foreignlanguage{english}{border routers}).
-
-    \choice наследник на TCP протокола.
   \end{choices}
 
   \question[6] Броят на валидните TCP или UDP портове е:
@@ -213,12 +188,29 @@
     \choice Презентационният.
   \end{oneparchoices}
 
-  \question[6] Всеки маршрутизатор (\foreignlanguage{english}{router}) може да
-  бъде свързан най-много с два други маршрутизатора.
-  \begin{oneparchoices}
-    \choice Вярно.
-    \CorrectChoice Грешно.
-  \end{oneparchoices}
+  \question[6] Маршрутната таблица съдържа: (изберете един верен отговор)
+  \begin{choices}
+    \choice съответствия между IP и MAC адреси
+    \choice списък с всички MAC адреси на системи, с които хостът е разменял
+    рамки
+    \CorrectChoice списък на пътищата към IP мрежите, с които хостът може да
+    разменя IP пакети
+    \choice списък на всички IP aдреси, с които хостът е разменял IP пакети
+  \end{choices}
+
+  \question[6] BGP e:
+  \begin{choices}
+    \choice протокол, използван за комуникация с най-близкия комутатор в
+    локалната мрежа.
+
+    \choice IGP протокол.
+
+    \CorrectChoice протокол за динамична маршрутизация, основно използван от
+    маршрутизаторите, седящи на границата между Интернет
+    (\foreignlanguage{english}{border routers}).
+
+    \choice наследник на TCP протокола.
+  \end{choices}
 
   \question[6] Целта на маршрута по подразбиране
   (\foreignlanguage{english}{default route}) е да покаже накъде трябва да бъдат
@@ -295,6 +287,17 @@
     бъдат маршрутизирани до вътрешния хост.
   \end{choices}
 
+  \question[10] Кои от следните адреси са част от мрежата \texttt{192.13.128.0} с
+  мрежова маска \texttt{255.255.128.0}?
+  \begin{choices}
+    \CorrectChoice 192.13.128.0
+    \CorrectChoice 192.13.255.1
+    \CorrectChoice 192.13.255.64
+    \choice 192.13.0.0
+    \choice 192.13.64.2
+    \CorrectChoice 192.13.192.255
+  \end{choices}
+
   \begin{center}
     \begin{tikzpicture}[auto,node distance=1.3cm,
       thick,main node/.style={circle,fill=blue!20,draw,font=\sffamily\Large\bfseries}]
@@ -327,17 +330,6 @@
     \choice 2
   \end{oneparchoices}
 
-  \question[10] Кои от следните адреси са част от мрежата \texttt{192.13.128.0} с
-  мрежова маска \texttt{255.255.128.0}?
-  \begin{choices}
-    \CorrectChoice 192.13.128.0
-    \CorrectChoice 192.13.255.1
-    \CorrectChoice 192.13.255.64
-    \choice 192.13.0.0
-    \choice 192.13.64.2
-    \CorrectChoice 192.13.192.255
-  \end{choices}
-
   \question[6] Вярно ли е, че мрежа с маска "`\texttt{/8}"' съдържа
   $2^{24}$ адреса, които могат да бъдат зачислени на хостове?
   \begin{oneparchoices}
@@ -360,6 +352,14 @@
     \CorrectChoice Възможно е да се използва верига от повече от един
     маршрутизатор, извършващ NAT.
   \end{choices}
+
+  \question[6] Всеки маршрутизатор (\foreignlanguage{english}{router}) може да
+  бъде свързан най-много с два други маршрутизатора.
+  \begin{oneparchoices}
+    \choice Вярно.
+    \CorrectChoice Грешно.
+  \end{oneparchoices}
+
 \end{questions}
 
 %%% Local Variables: 
