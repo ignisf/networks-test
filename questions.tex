@@ -19,27 +19,6 @@
     по-високите.
   \end{choices}
 
-  \question[6] Ако вземем в предвид \foreignlanguage{english}{DoD (TCP/IP)}
-  модела, как протоколните единици данни (\foreignlanguage{english}{protocol
-    data units} или \foreignlanguage{english}{PDUs}) на един слой се
-  енкапсулират от по-нисък слой? (Изберете два верни отговора)
-
-  \begin{choices}
-    \choice В изходяща посока, новата протоколна единица от данни бива
-    конструирани от комбинация от данни от слоевете под и над енкапсулиращия слой.
-
-    \CorrectChoice Протоколната единица данни на даден слой е съставена от поле от
-    данни, състоящо се единствено от цялата протоколна единица данни на горния
-    слой, и заглавна част (\foreignlanguage{english}{header}), описваща тези
-    данни.
-
-    \choice В Интернет, всички данни, които пристигат от мрежовия слой, трябва да
-    преминат през TCP слоя, преди да достигнат приложението.
-
-    \CorrectChoice Във входяща посока, частта от протоколната единица данни, която
-    съставлява данните, се предава на горния слой.
-  \end{choices}
-
   \question[6] Кои от следните твърдения са верни? (Изберете два отговора)
   \begin{choices}
     \CorrectChoice Последствие от използването на разслоени модели в компютърните
@@ -57,17 +36,20 @@
 
     \choice Мрежовият слой разчита на състоянието на връзката, поддържано от
     транспортния слой, за да следи с кого комуникира.
-  \end{choices}\question[6] Какво \emph{НЕ} се случва, когато рамка
+  \end{choices}
+
+  \question[6] Какво \emph{НЕ} се случва, когато рамка
   (\foreignlanguage{english}{frame}) бъде получена от комутатор
   (\foreignlanguage{english}{switch}) на втори слой? (Изберете три отговора)
 
   \begin{choices}
-    \choice Комутаторът ще направи решение за пренасочване
-    (\foreignlanguage{english}{forwarding decision}) на базата на адресът на
+    \choice Комутаторът ще реши къде да изпрати рамката (ще направи
+    \foreignlanguage{english}{forwarding decision}) на базата на адреса на
     получател от \foreignlanguage{english}{Ethernet} хедъра.
 
-    \CorrectChoice Комутаторът ще енкапсулира рамката отново с нов Ethernet хедър,
-    в който адресът на източникът ще бъде MAC адресът на комутатора.
+    \CorrectChoice Комутаторът (преклопник мак.) ще енкапсулира рамката
+    отново с нов Ethernet хедър, в който адресът на източникът ще бъде MAC
+    адресът на комутатора.
 
     \CorrectChoice Комутаторът ще трябва да научи IP адреса на получателя, за да
     направи избор за пренасочване.
@@ -110,48 +92,6 @@
     данни от транспортния слой.
   \end{choices}
 
-  \question[6] Кои от следните твърдения не са верни за IP? (Изберете три
-  отговора)
-  \begin{choices}
-    \CorrectChoice \texttt{\foreignlanguage{english}{time-to-live}} полето
-    пренася данни от транспортния слой.
-
-    \choice IP датаграмите съдържат целочислено поле, на базата на чиято
-    стойност се открива и прекратява препредаването им в безкраен цикъл.
-
-    \CorrectChoice IP датаграмите съдържат
-    \texttt{\foreignlanguage{english}{time-to-live}} поле, което се състои от
-    списък на всички маршрутизатори, през които е преминал пакетът, за да може
-    крайният хост да установи дали пакета е бил затворен в цикъл.
-
-    \CorrectChoice IP датаграмите (\foreignlanguage{english}{datagram}) съдържат
-    поле "`\texttt{\foreignlanguage{english}{hop-count}}"', към чиято стойност
-    бива добавена единица всеки път, когато датаграмата премине през
-    маршрутизатор (\foreignlanguage{english}{router}).
-  \end{choices}
-
-  \question[6] Маршрутизаторът (\foreignlanguage{english}{router}) може да
-  отхвърля пакети, когато няма налични ресурси за обработката им. Има обаче
-  случаи, когато ресурси за обработката на пакетите са налични, но въпреки това
-  маршрутизаторът ги отхвърля. Кои от следните са примери за сценарии, в които
-  маршрутизатор отказва да обработи пакети, въпреки че има наличните за това
-  ресурси? (Изберете две)
-
-  \begin{choices}
-    \choice При претоварена с данни връзка.
-
-    \CorrectChoice Маршрутизаторът е конфигуриран като
-    \foreignlanguage{english}{firewall} и това диктува кои пакети трябва да
-    бъдат отхвърлени и кои -- обработени.
-
-    \CorrectChoice Доставчик на Интернет ограничава широчината на лентата
-    (\foreignlanguage{english}{bandwidth}), която потребителите могат да
-    използват, въпреки че има достатъчен капацитет.
-
-    \choice При пристигане на пакет, чиято контролна сума
-    (\foreignlanguage{english}{checksum}) показва, че в него има грешка.
-  \end{choices}
-
   \question[6] Кои от следните твърдения са верни относно
   \foreignlanguage{english}{TCP}? (Изберете два отговора)
   \begin{choices}
@@ -176,9 +116,8 @@
     включен в TCP хедъра.
   \end{choices}
 
-  \question[6] TCP е отговорен за предоставянето на надеждно, последователно
-  доставяне на данни между приложения. Кои от следните са директни последствия
-  от изборите, направени при проектирането на TCP? (Изберете два отговора)
+  \question[6] Кои от следните са директни последствия от изборите, направени
+  при проектирането на TCP? (Изберете два отговора)
   \begin{choices}
     \choice TCP е самодостатъчен и наличната адресна информация в TCP хедъра
     позволява при провеждане на комуникация да не се използва мрежовия слой или
@@ -199,9 +138,7 @@
     надеждност и последователност на данните.
   \end{choices}
 
-  \question[6] Преди да започне комуникацията, TCP установява нова връзка
-  посредством тристранно ръкостискане (\foreignlanguage{english}{three-way
-    handshake}). Това е така, защото:
+  \question[6] TCP използва three-way handshake, защото:
   \begin{choices}
 
     \CorrectChoice При TCP, крайните точки пазят информация за състоянието на
@@ -219,9 +156,7 @@
     ръкостискане позволява двата потока от данни да бъдат установени и потвърдени.
   \end{choices}
 
-  \question[6] Сравнен с TCP, UDP е много по-прост протокол. Той е безвръзков и
-  не предоставя надеждно предаване на данните. Кои от следните твърдения,
-  относно UDP, са верни?
+  \question[6] Кои от следните твърдения, относно UDP, са верни?
   \begin{choices}
     \choice Никое приложение не би искало да използва UDP, защото не предоставя
     надежден транспорт на данните.
@@ -239,16 +174,8 @@
     (пр. \foreignlanguage{english}{voice-over-IP}, онлайн игри).
   \end{choices}
 
-  \question[6] Комутационните мрежи (\foreignlanguage{english}{packet-switched
-    networks}) не позволяват няколко източници и дестинации на пакети да споделят
-  една и съща връзка.
-  \begin{oneparchoices}
-    \choice Вярно.
-    \CorrectChoice Грешно.
-  \end{oneparchoices}
-
   \question[6] Всички пакети, които имат еднакви източник и дестинация трябва да
-  преминат през едно и също множество от връзки и комутатори.
+  преминат по един и същи път.
   \begin{oneparchoices}
     \choice Вярно.
     \CorrectChoice Грешно.
@@ -278,27 +205,19 @@
     \choice Защита от злонамерени атаки.
   \end{choices}
 
-  \question[6] TCP сегмент може да енкапсулира полезен товар
-  (\foreignlanguage{english}{payload}), в който има друг TCP сегмент.
-  \begin{oneparchoices}
-    \CorrectChoice Вярно.
-
-    \choice Грешно.
-  \end{oneparchoices}
-
   \question[6] Кой слой се намира между физическия и мрежовия слой?
   \begin{oneparchoices}
     \choice Сесийният.
 
     \choice Транспортният.
 
-    \CorrectChoice Каналният.
+    \CorrectChoice Каналният (\foreignlanguage{english}{data-link}).
 
     \choice Презентационният.
   \end{oneparchoices}
 
-  \question[6] Изберете правилното продължение на изречението "`Разслояването
-  (\foreignlanguage{english}{layering})..."'
+  \question[6] Изберете правилното продължение на изречението "`Разделянето на
+  слоеве (\foreignlanguage{english}{layering})..."'
   \begin{choices}
     \choice пречи на злонамерени актьори да компрометират кода.
 
@@ -316,7 +235,7 @@
     \CorrectChoice Грешно.
   \end{oneparchoices}
 
-  \question[6] Целта на маршрута по премълчаване
+  \question[6] Целта на маршрута по подразбиране
   (\foreignlanguage{english}{default route}) е да покаже накъде трябва да бъдат
   пренасочени пакетите, чиято дестинация не съвпада с никой друг запис в
   маршрутната таблица.
@@ -343,7 +262,7 @@
     \CorrectChoice 192.13.192.255
   \end{choices}
 
-  \question[6] Вярно ли е, че мрежа с представка "`\texttt{/8}"' съдържа
+  \question[6] Вярно ли е, че мрежа с маска "`\texttt{/8}"' съдържа
   $2^{24}$ адреса, които могат да бъдат зачислени на хостове?
   \begin{oneparchoices}
     \choice Вярно.
@@ -351,16 +270,8 @@
   \end{oneparchoices}
 
 
-  \question[6] Вярно ли е, че мрежа с представка "`\texttt{/8}"' съдържа
+  \question[6] Вярно ли е, че мрежа с маска "`\texttt{/8}"' съдържа точно
   $2^8$ адреса, които могат да бъдат зачислени на хостове?
-  \begin{oneparchoices}
-    \choice Вярно.
-    \CorrectChoice Грешно.
-  \end{oneparchoices}
-
-  \question[6] Вярно ли е, че подмрежа с маска \texttt{255.255.64.0} съдържа
-  повече адреси от такава с маска \texttt{255.255.8.0}?
-
   \begin{oneparchoices}
     \choice Вярно.
     \CorrectChoice Грешно.
@@ -390,22 +301,7 @@
     използвани за определяне на вътрешния порт.
 
     \CorrectChoice В общия случай не може да се даде гаранция, че сегментите ще
-    бъдат маршрутизирани до порт 5577 на вътрешния хост.
-  \end{choices}
-
-  \question[6] Кое от следните твърдения за RIP e вярно?
-
-  \begin{choices}
-    \choice Като оптимизация за недостатъците в дизайна на RIP, маршрутизаторите
-    не изпращат маршрутна информация до съседите си, след като разстоянието до
-    тях спадне от безкрайност до крайна стойност.
-
-    \CorrectChoice След $N$ стъпки, алгоритъмът на Белман-Форд, използван в RIP,
-    ще е изчислил цената за достигане на всяка дестинация на разстояние от
-    най-много $N$ скока (\foreignlanguage{english}{hops}).
-
-    \choice Алгоритъмът на Белман-Форд се схожда в крайно време, ако всички цени
-    на връзки са отрицателни.
+    бъдат маршрутизирани до вътрешния хост.
   \end{choices}
 
   \begin{center}
@@ -429,7 +325,7 @@
 
   \question[7] На графиката отгоре са изобразени четири маршрутизатора, които са
   конфигурирани за динамична маршрутизация с RIP. Ако не са имплементирани
-  оптимизации за алгоритъма на Белман-Форд, какво ще бъде разстоянието между A и
+  оптимизации за алгоритъма на RIP, какво ще бъде разстоянието между A и
   D след една стъпка от схождането на мрежата. (Приемете, че маршрутизаторите са
   били изключени до този момент)
 
@@ -449,7 +345,8 @@
     \choice \texttt{10.0.0.0/24}, \texttt{10.0.1.0/23}, \texttt{10.0.3.0/24}
   \end{choices}
 
-  \question[6] На кой слой от OSI модела работят маршрутизаторите?
+  \question[6] На кой слой от седемслойния OSI модел или петслойния BSD модел
+  работят маршрутизаторите?
   \begin{oneparchoices}
     \choice 1
     \choice 2
@@ -458,9 +355,8 @@
     \choice 5
   \end{oneparchoices}
 
-  \question[6] На кой слой от OSI модела работят комутаторите
-  (\foreignlanguage{english}{switches})
-
+  \question[6] На кой слой от седемслойния OSI модел или петслойния BSD модел
+  работят комутаторите (\foreignlanguage{english}{switches})
   \begin{oneparchoices}
     \choice 1
     \CorrectChoice 2
@@ -481,81 +377,97 @@
 
   \question[6] RIP и OSPF са протоколи за:
   \begin{choices}
-    \choice 
+    \choice Намиране на съответствието между IP aдрес и MAC aдерес.
+    \choice Диагностика на мрежови проблеми.
+    \choice Комуникация между автономни системи (AS).
+    \CorrectChoice Размяна на маршрути.
   \end{choices}
 
-6. RIP (i OSPF) e protokol za
-a) namirane na suotvetstvieto m/u IP address i MAC address
-b) diagnostika na mrezhovi problemi
-c) komunikacija m/u avtonomni sistemi (AS)
-d) dinamichna razmjana na routes
 
-7. BGP e
-a) protokol, izpolzvan za komunikacija s naj-blizkija switch v lokalnata mrezha
-b) IGP protokol
-c) protokol za dinamichen routing, osnovno izpolzvan ot border routerite na avtonomnite sistemi
-d) naslednik na TCP protokola
+  \question[6] BGP e:
+  \begin{choices}
+    \choice протокол, използван за комуникация с най-близкия комутатор в локалната мрежа.
+    \choice IGP протокол.
 
-8. za TCP mozhem da kazhaem, che
-a) ne garantira reliable data transmission
-b) e protokol ot L3
-c) garantira reliable data transmission
-d) zadulzhitelno predava i IP adresite na komunikirashtite hostove, zashtoto IP protokola e unreliable
+    \CorrectChoice протокол за динамична маршрутизация, основно използван от
+    маршрутизаторите, седящи на границата между Интернет
+    (\foreignlanguage{english}{border routers}).
 
-9. UDP dobavja pole za port s dulzhina
-a) 8bit
-b) 9bit
-c) 12bit
-d) 16bit
-e) 18bit
+    \choice наследник на TCP протокола.
+  \end{choices}
 
-10. porta, dobavjan ot TCP i UDP protokolite,
-a) suvpada s poslednite 2 okteta ot mrezhovata maska
-b) se maskira sus starshite 3 okteta na MAC adresa
-c) adresira mrezhovite prilozhenija, kojto sa startirani na hosta
-d) se polzva za namirane na default router-a
+  \question[6] UDP добавя поле за порт, чиято дължина е:
+  \begin{choices}
+    \CorrectChoice 8 бита.
+    \choice 9 бита.
+    \choice 12 бита.
+    \choice 16 бита
+    \choice 18 бита.
+  \end{choices}
 
-11. broja na validnite TCP/UDP portovete e
-a) 255
-b) 256
-c) 32768
-d) 65535
-f) 262144
-g) 4096
+  \question[6] Полето "`\foreignlanguage{english}{destination port}"', което TCP и UDP въвеждат...
+  \begin{choices}
+    \choice съвпада с последните два октета от мрежовата маска.
+    \choice се маскира със старшите три октета на MAC адреса.
+    \CorrectChoice се използва за адресация на мрежовите приложения, които работят на крайния хост.
+    \choice се използва за намиране на маршрутизатора по подразбиране.
+  \end{choices}
 
-12. 10.0.0.0/28 mozhe da se razdeli na naj-mnogo
-a) 2 podmrezhi
-b) 3 podmrezhi
-c) 4 podmrezhi
-d) na mozhe da se razdeli na podmrezhi
+  \question[6] Броят на валидните TCP или UDP портове е:
+  \begin{oneparchoices}
+    \choice 255
+    \choice 256
+    \choice 32768
+    \CorrectChoice 65535
+    \choice 262144
+    \choice 4096
+  \end{oneparchoices}
 
-13. 10.0.0.0/24 sudurzha podmrezhite
-a) 10.0.1.0/25
-b) 10.0.0.0/23
-c) 10.0.1.0/24
-d) 10.0.0.0/25
-e) 10.0.2.0/25
+  \question[6] Мрежата \texttt{10.0.0.0/28} може да се раздели на най-много
+  \begin{choices}
+    \choice 2 подмрежи.
+    \choice 3 подмрежи.
+    \CorrectChoice 4 подмрежи.
+    \choice Не може да се раздели на подмрежи.
+  \end{choices}
 
-14. komandata "echo 1 > /proc/sys/net/ipv4/ip_forward" pod Linux
-a) aktivira routing podsistemata
-b) spira aktivnija ethernet interface
-c) uvelichava s 1 poslednija oktet ot adresa na hosta
-d) zabranjava IPv6 protokola
+  \question[6] Мрежата \texttt{10.0.0.0/24} съдържа подмрежите:
+  \begin{choices}
+    \choice \texttt{10.0.1.0/25}
+    \choice \texttt{10.0.0.0/23}
+    \choice \texttt{10.0.1.0/24}
+    \CorrectChoice \texttt{10.0.0.0/25}
+    \choice \texttt{10.0.2.0/25}
+  \end{choices}
 
-15. ako sme v mrezha 10.0.0.0/24 i znaem, che imame router s adres 10.0.0.1 v mrezhata, s koja komanda dobavjame route kum mrezha 192.168.0.0/24
-a) route add -net 192.168.0.0/24 gw 10.0.0.0
-b) route add -net 192.168.0.0/24 gw 10.0.0.1
-c) route add -net 192.168.0.0/24 gw 10.255.255.255
-d) route add -net 192.168.0.0/24 gw 10.0.0.255
-e) route add -net 192.168.255.255/24 gw 10.0.0.1
+  \question[6] Командите "`\texttt{echo 1 > /proc/sys/net/ipv4/ip\_forward}"' и \\
+  \texttt{sysctl -w net.ipv4.ip\_forward=1} под Linux:
+  \begin{choices}
+    \CorrectChoice активират подсистемата за маршрутизация на ядрото.
+    \choice спират активния Ethernet интерфейс.
+    \choice увеличават с 1 последния октет на адреса на хоста.
+    \choice забраняват IPv6 протокола.
+  \end{choices}
 
-16. koja ot slednite mrezhi ne e validna v internet
-a) 1.0.0.0/22
-b) 2.0.0.0/24
-c) 172.16.3.0/24
-d) 200.0.0.0/22
-e) 192.169.0.0/16
+  \question[6] Ако сме на хост в мрежа \texttt{10.0.0.0/24} и знаем, че имаме
+  маршрутизатор с адрес \texttt{10.0.0.1} в мрежата, с коя команда добавяме
+  маршрут до мрежа \texttt{192.168.0.0/24}?
+  \begin{choices}
+    \choice \texttt{route add -net 192.168.0.0/24 gw 10.0.0.0}
+    \CorrectChoice \texttt{route add -net 192.168.0.0/24 gw 10.0.0.1}
+    \choice \texttt{route add -net 192.168.0.0/24 gw 10.255.255.255}
+    \choice \texttt{route add -net 192.168.0.0/24 gw 10.0.0.255}
+    \choice \texttt{route add -net 192.168.255.255/24 gw 10.0.0.1}
+  \end{choices}
 
+  \question[6] Коя от следните мрежи не следва да бъде маршрутизируема в Интернет?
+  \begin{choices}
+    \choice \texttt{1.0.0.0/22}
+    \choice \texttt{2.0.0.0/24}
+    \CorrectChoice \texttt{172.16.3.0/24}
+    \choice \texttt{200.0.0.0/22}
+    \choice \texttt{192.169.0.0/16}
+  \end{choices}
 \end{questions}
 
 %%% Local Variables: 
