@@ -2,6 +2,82 @@
 
 \begin{questions}
 
+  \question[7] Кои от следните твърдения, относно UDP, са верни?
+  \begin{choices}
+    \choice Никое приложение не би искало да използва UDP, защото не предоставя
+    надежден транспорт на данните.
+
+    \CorrectChoice UDP често се използва за разпръскване
+    \foreignlanguage{english}{broadcast} на данни, защото не изисква
+    установяването на състояние за всеки получател на данните.
+
+    \CorrectChoice За кратка комуникация от вид "`заявка-отговор"', използвана
+    например при DNS, се предпочита използването на UDP, за да се избегнат
+    служебните разходи (\foreignlanguage{english}{overhead}) на TCP.
+
+    \CorrectChoice UDP е подходящ за приложения, които не се нуждаят
+    задължително от надежден транспорт на данни
+    (пр. \foreignlanguage{english}{voice-over-IP}, онлайн игри).
+  \end{choices}
+
+  \question[6] Кои от следните са следствия от енкапсулацията на данните?
+  \begin{choices}
+    \CorrectChoice Запазване на разделението на слоевете на архитектурата.
+
+    \choice Изпращане на по-голямо количество данни по мрежата.
+
+    \CorrectChoice Опростяване на имплементацията на слоевете на архитектурата.
+
+    \choice Защита от злонамерени атаки.
+  \end{choices}
+
+  \question[6] Кой слой се намира между физическия и мрежовия слой?
+  \begin{oneparchoices}
+    \choice Сесийният.
+
+    \choice Транспортният.
+
+    \CorrectChoice Каналният (\foreignlanguage{english}{data-link}).
+
+    \choice Презентационният.
+  \end{oneparchoices}
+
+  \question[6] Маршрутната таблица съдържа: (изберете един верен отговор)
+  \begin{choices}
+    \choice съответствия между IP и MAC адреси
+    \choice списък с всички MAC адреси на системи, с които хостът е разменял
+    рамки
+    \CorrectChoice списък на пътищата към IP мрежите, с които хостът може да
+    разменя IP пакети
+    \choice списък на всички IP aдреси, с които хостът е разменял IP пакети
+  \end{choices}
+
+  \question[10] Мрежата \texttt{10.0.0.0/28} може да се раздели на най-много
+  \begin{choices}
+    \choice 2 подмрежи.
+    \choice 3 подмрежи.
+    \CorrectChoice 4 подмрежи.
+    \choice Не може да се раздели на подмрежи.
+  \end{choices}
+
+  \question[6] RIP и OSPF са протоколи за:
+  \begin{choices}
+    \choice Намиране на съответствието между IP aдрес и MAC aдерес.
+    \choice Диагностика на мрежови проблеми.
+    \choice Комуникация между автономни системи (AS).
+    \CorrectChoice Размяна на маршрути.
+  \end{choices}
+
+  \question[6] Броят на валидните TCP или UDP портове е:
+  \begin{oneparchoices}
+    \choice 255
+    \choice 256
+    \choice 32768
+    \CorrectChoice 65535
+    \choice 262144
+    \choice 4096
+  \end{oneparchoices}
+
   \question[6] На кой слой от седемслойния OSI модел или петслойния BSD модел
   работят маршрутизаторите?
   \begin{oneparchoices}
@@ -38,41 +114,6 @@
     \choice 3
     \choice 4
     \choice 5
-  \end{oneparchoices}
-
-  \question[6] RIP и OSPF са протоколи за:
-  \begin{choices}
-    \choice Намиране на съответствието между IP aдрес и MAC aдерес.
-    \choice Диагностика на мрежови проблеми.
-    \choice Комуникация между автономни системи (AS).
-    \CorrectChoice Размяна на маршрути.
-  \end{choices}
-
-  \question[6] Броят на валидните TCP или UDP портове е:
-  \begin{oneparchoices}
-    \choice 255
-    \choice 256
-    \choice 32768
-    \CorrectChoice 65535
-    \choice 262144
-    \choice 4096
-  \end{oneparchoices}
-
-  \question[10] Мрежата \texttt{10.0.0.0/28} може да се раздели на най-много
-  \begin{choices}
-    \choice 2 подмрежи.
-    \choice 3 подмрежи.
-    \CorrectChoice 4 подмрежи.
-    \choice Не може да се раздели на подмрежи.
-  \end{choices}
-
-  \question[10] Мрежата \texttt{10.0.0.0/24} съдържа подмрежите:
-  \begin{oneparchoices}
-    \choice \texttt{10.0.1.0/25}
-    \choice \texttt{10.0.0.0/23}
-    \choice \texttt{10.0.1.0/24}
-    \CorrectChoice \texttt{10.0.0.0/25}
-    \choice \texttt{10.0.2.0/25}
   \end{oneparchoices}
 
   \question[6] Командите "`\texttt{echo 1 > /proc/sys/net/ipv4/ip\_forward}"' и \\
@@ -136,6 +177,16 @@
     \choice \texttt{\foreignlanguage{english}{time-to-live}} полето пренася
     данни от транспортния слой.
   \end{choices}
+
+  \question[10] Мрежата \texttt{10.0.0.0/24} съдържа подмрежите:
+  \begin{oneparchoices}
+    \choice \texttt{10.0.1.0/25}
+    \choice \texttt{10.0.0.0/23}
+    \choice \texttt{10.0.1.0/24}
+    \CorrectChoice \texttt{10.0.0.0/25}
+    \choice \texttt{10.0.2.0/25}
+  \end{oneparchoices}
+
   \question[6] Ако сме на хост в мрежа \texttt{10.0.0.0/24} и знаем, че имаме
   маршрутизатор с адрес \texttt{10.0.0.1} в мрежата, с коя команда добавяме
   маршрут до мрежа \texttt{192.168.0.0/24}?
@@ -145,57 +196,6 @@
     \choice \texttt{route add -net 192.168.0.0/24 gw 10.255.255.255}
     \choice \texttt{route add -net 192.168.0.0/24 gw 10.0.0.255}
     \choice \texttt{route add -net 192.168.255.255/24 gw 10.0.0.1}
-  \end{choices}
-
-
-  \question[7] Кои от следните твърдения, относно UDP, са верни?
-  \begin{choices}
-    \choice Никое приложение не би искало да използва UDP, защото не предоставя
-    надежден транспорт на данните.
-
-    \CorrectChoice UDP често се използва за разпръскване
-    \foreignlanguage{english}{broadcast} на данни, защото не изисква
-    установяването на състояние за всеки получател на данните.
-
-    \CorrectChoice За кратка комуникация от вид "`заявка-отговор"', използвана
-    например при DNS, се предпочита използването на UDP, за да се избегнат
-    служебните разходи (\foreignlanguage{english}{overhead}) на TCP.
-
-    \CorrectChoice UDP е подходящ за приложения, които не се нуждаят
-    задължително от надежден транспорт на данни
-    (пр. \foreignlanguage{english}{voice-over-IP}, онлайн игри).
-  \end{choices}
-
-  \question[6] Кои от следните са следствия от енкапсулацията на данните?
-  \begin{choices}
-    \CorrectChoice Запазване на разделението на слоевете на архитектурата.
-
-    \choice Изпращане на по-голямо количество данни по мрежата.
-
-    \CorrectChoice Опростяване на имплементацията на слоевете на архитектурата.
-
-    \choice Защита от злонамерени атаки.
-  \end{choices}
-
-  \question[6] Кой слой се намира между физическия и мрежовия слой?
-  \begin{oneparchoices}
-    \choice Сесийният.
-
-    \choice Транспортният.
-
-    \CorrectChoice Каналният (\foreignlanguage{english}{data-link}).
-
-    \choice Презентационният.
-  \end{oneparchoices}
-
-  \question[6] Маршрутната таблица съдържа: (изберете един верен отговор)
-  \begin{choices}
-    \choice съответствия между IP и MAC адреси
-    \choice списък с всички MAC адреси на системи, с които хостът е разменял
-    рамки
-    \CorrectChoice списък на пътищата към IP мрежите, с които хостът може да
-    разменя IP пакети
-    \choice списък на всички IP aдреси, с които хостът е разменял IP пакети
   \end{choices}
 
   \question[6] BGP e:
