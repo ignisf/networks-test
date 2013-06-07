@@ -17,10 +17,12 @@
 
     \CorrectChoice По-ниските слоеве скриват имплементационни детайли от
     по-високите.
-  \end{choices}\question[6] Ако вземем в предвид \foreignlanguage{english}{DoD (TCP/IP)}
-  модела, как протоколните единици данни (\foreignlanguage{english}{protocol data
-    units} или \foreignlanguage{english}{PDUs}) на един слой се енкапсулират от
-  по-нисък слой? (Изберете верни отговора)
+  \end{choices}
+
+  \question[6] Ако вземем в предвид \foreignlanguage{english}{DoD (TCP/IP)}
+  модела, как протоколните единици данни (\foreignlanguage{english}{protocol
+    data units} или \foreignlanguage{english}{PDUs}) на един слой се
+  енкапсулират от по-нисък слой? (Изберете два верни отговора)
 
   \begin{choices}
     \choice В изходяща посока, новата протоколна единица от данни бива
@@ -36,8 +38,9 @@
 
     \CorrectChoice Във входяща посока, частта от протоколната единица данни, която
     съставлява данните, се предава на горния слой.
-  \end{choices}\question[6] Кои от следните твърдения са верни? (Изберете два отговора)
+  \end{choices}
 
+  \question[6] Кои от следните твърдения са верни? (Изберете два отговора)
   \begin{choices}
     \CorrectChoice Последствие от използването на разслоени модели в компютърните
     мрежи, е това, че даден слой при източника на данните комуникира със същия
@@ -160,8 +163,8 @@
     сегменти.
 
     \CorrectChoice \foreignlanguage{english}{TCP} доставя надеждно и в
-    правилната подредба струя от байтове от единия до другия участник в
-    комуникацията .
+    правилната подредба поток от байтове от единия до другия участник в
+    комуникацията.
 
     \CorrectChoice Когато \foreignlanguage{english}{TCP} пакет достигне до
     дестинацията си, данните, които той пренася, биват доставени до услугата или
@@ -212,8 +215,8 @@
     ръкостискане. Третата стъпка е въведена единствено, за да се предотврати
     подслушването на данните.
 
-    \CorrectChoice TCP установява струя от данни и в двете посоки. Тристранното
-    ръкостискане позволява двете струи да бъдат установени и потвърдени.
+    \CorrectChoice TCP установява поток от данни и в двете посоки. Тристранното
+    ръкостискане позволява двата потока от данни да бъдат установени и потвърдени.
   \end{choices}
 
   \question[6] Сравнен с TCP, UDP е много по-прост протокол. Той е безвръзков и
@@ -306,8 +309,8 @@
     хостове в мрежата.
   \end{choices}
 
-  \question[6] Всеки маршрутизатор (\foreignlanguage{english}{router}) може да бъде свързан най-много с два други
-  маршрутизатора.
+  \question[6] Всеки маршрутизатор (\foreignlanguage{english}{router}) може да
+  бъде свързан най-много с два други маршрутизатора.
   \begin{oneparchoices}
     \choice Вярно.
     \CorrectChoice Грешно.
@@ -328,6 +331,231 @@
     \choice Вярно.
     \CorrectChoice Грешно.
   \end{oneparchoices}
+
+  \question[6] Кои от следните адреси са част от мрежата \texttt{192.13.128.0} с
+  мрежова маска \texttt{255.255.128.0}?
+  \begin{choices}
+    \CorrectChoice 192.13.128.0
+    \CorrectChoice 192.13.255.1
+    \CorrectChoice 192.13.255.64
+    \choice 192.13.0.0
+    \choice 192.13.64.2
+    \CorrectChoice 192.13.192.255
+  \end{choices}
+
+  \question[6] Вярно ли е, че мрежа с представка "`\texttt{/8}"' съдържа
+  $2^{24}$ адреса, които могат да бъдат зачислени на хостове?
+  \begin{oneparchoices}
+    \choice Вярно.
+    \CorrectChoice Грешно.
+  \end{oneparchoices}
+
+
+  \question[6] Вярно ли е, че мрежа с представка "`\texttt{/8}"' съдържа
+  $2^8$ адреса, които могат да бъдат зачислени на хостове?
+  \begin{oneparchoices}
+    \choice Вярно.
+    \CorrectChoice Грешно.
+  \end{oneparchoices}
+
+  \question[6] Вярно ли е, че подмрежа с маска \texttt{255.255.64.0} съдържа
+  повече адреси от такава с маска \texttt{255.255.8.0}?
+
+  \begin{oneparchoices}
+    \choice Вярно.
+    \CorrectChoice Грешно.
+  \end{oneparchoices}
+
+  \question[6] Посочете вярното твърдение, относно NAT.
+  \begin{choices}
+    \choice Невъзможно е хостовете, намиращи се зад NAT да инициират връзки с Интернет.
+    \choice Замисълът на NAT е да прочита всички пакети и да пропуска само безопасните.
+    \CorrectChoice Възможно е да се използва верига от повече от един
+    маршрутизатор, извършващ NAT.
+  \end{choices}
+
+  \question[6] Външен хост се опитва да създаде TCP връзка с хост, слушащ на
+  порт \texttt{5577} зад NAT (\foreignlanguage{english}{Masquerade} или
+  \foreignlanguage{english}{Port-address translation}). Към кой порт на
+  маршрутизатора, извършващ динамичен NAT, трябва да адресира TCP сегментите си
+  външния хост?
+
+  \begin{choices}
+    \choice Трябва да ги адресира към порт 5577. NAT автоматично ще препрати
+    сегментите към вътрешния хост на базата на таблицата си.
+
+    \choice Може да ги адресира към всеки порт на маршрутизатора, но първите 16
+    бита на съдържанието, енкапсулирано в TCP сегмента, трябва да съдържат
+    \texttt{5577}. Ако вътрешният хост е зад NAT, тези 16 бита винаги ще бъдат
+    използвани за определяне на вътрешния порт.
+
+    \CorrectChoice В общия случай не може да се даде гаранция, че сегментите ще
+    бъдат маршрутизирани до порт 5577 на вътрешния хост.
+  \end{choices}
+
+  \question[6] Кое от следните твърдения за RIP e вярно?
+
+  \begin{choices}
+    \choice Като оптимизация за недостатъците в дизайна на RIP, маршрутизаторите
+    не изпращат маршрутна информация до съседите си, след като разстоянието до
+    тях спадне от безкрайност до крайна стойност.
+
+    \CorrectChoice След $N$ стъпки, алгоритъмът на Белман-Форд, използван в RIP,
+    ще е изчислил цената за достигане на всяка дестинация на разстояние от
+    най-много $N$ скока (\foreignlanguage{english}{hops}).
+
+    \choice Алгоритъмът на Белман-Форд се схожда в крайно време, ако всички цени
+    на връзки са отрицателни.
+  \end{choices}
+
+  \begin{center}
+    \begin{tikzpicture}[auto,node distance=1.5cm,
+      thick,main node/.style={circle,fill=blue!20,draw,font=\sffamily\Large\bfseries}]
+
+
+      \node[main node] (3) {C};
+      \node[main node] (1) [above left of=3] {A};
+      \node[main node] (2) [above right of=3] {B};
+      \node[main node] (4) [below of=3] {D};
+
+
+      \path[every node/.style={font=\sffamily\small}]
+        (1) edge node {} (3)
+            edge node {} (2)
+        (2) edge node {} (3)
+        (3) edge node {} (4);
+    \end{tikzpicture}
+  \end{center}
+
+  \question[7] На графиката отгоре са изобразени четири маршрутизатора, които са
+  конфигурирани за динамична маршрутизация с RIP. Ако не са имплементирани
+  оптимизации за алгоритъма на Белман-Форд, какво ще бъде разстоянието между A и
+  D след една стъпка от схождането на мрежата. (Приемете, че маршрутизаторите са
+  били изключени до този момент)
+
+  \begin{oneparchoices}
+    \choice 1
+    \CorrectChoice безкрайност
+    \choice 3
+    \choice 2
+  \end{oneparchoices}
+
+  \question[2] Кое от следните не е правилно разделяне на мрежата
+  \texttt{10.0.0.0/22} на три подмрежи?
+
+  \begin{choices}
+    \choice \texttt{10.0.0.0/24}, \texttt{10.0.1.0/24}, \texttt{10.0.2.0/23}
+    \CorrectChoice \texttt{10.0.0.0/23}, \texttt{10.0.2.0/24}, \texttt{10.0.3.0/24}
+    \choice \texttt{10.0.0.0/24}, \texttt{10.0.1.0/23}, \texttt{10.0.3.0/24}
+  \end{choices}
+
+  \question[6] На кой слой от OSI модела работят маршрутизаторите?
+  \begin{oneparchoices}
+    \choice 1
+    \choice 2
+    \CorrectChoice 3
+    \choice 4
+    \choice 5
+  \end{oneparchoices}
+
+  \question[6] На кой слой от OSI модела работят комутаторите
+  (\foreignlanguage{english}{switches})
+
+  \begin{oneparchoices}
+    \choice 1
+    \CorrectChoice 2
+    \choice 3
+    \choice 4
+    \choice 5
+  \end{oneparchoices}
+
+  \question[6] Маршрутната таблица съдържа: (изберете един верен отговор)
+  \begin{choices}
+    \choice съответствия между IP и MAC адреси
+    \choice списък с всички MAC адреси на системи, с които хостът е разменял
+    рамки
+    \CorrectChoice списък на пътищата към IP мрежите, с които хостът може да
+    разменя IP пакети
+    \choice списък на всички IP aдреси, с които хостът е разменял IP пакети
+  \end{choices}
+
+  \question[6] RIP и OSPF са протоколи за:
+  \begin{choices}
+    \choice 
+  \end{choices}
+
+6. RIP (i OSPF) e protokol za
+a) namirane na suotvetstvieto m/u IP address i MAC address
+b) diagnostika na mrezhovi problemi
+c) komunikacija m/u avtonomni sistemi (AS)
+d) dinamichna razmjana na routes
+
+7. BGP e
+a) protokol, izpolzvan za komunikacija s naj-blizkija switch v lokalnata mrezha
+b) IGP protokol
+c) protokol za dinamichen routing, osnovno izpolzvan ot border routerite na avtonomnite sistemi
+d) naslednik na TCP protokola
+
+8. za TCP mozhem da kazhaem, che
+a) ne garantira reliable data transmission
+b) e protokol ot L3
+c) garantira reliable data transmission
+d) zadulzhitelno predava i IP adresite na komunikirashtite hostove, zashtoto IP protokola e unreliable
+
+9. UDP dobavja pole za port s dulzhina
+a) 8bit
+b) 9bit
+c) 12bit
+d) 16bit
+e) 18bit
+
+10. porta, dobavjan ot TCP i UDP protokolite,
+a) suvpada s poslednite 2 okteta ot mrezhovata maska
+b) se maskira sus starshite 3 okteta na MAC adresa
+c) adresira mrezhovite prilozhenija, kojto sa startirani na hosta
+d) se polzva za namirane na default router-a
+
+11. broja na validnite TCP/UDP portovete e
+a) 255
+b) 256
+c) 32768
+d) 65535
+f) 262144
+g) 4096
+
+12. 10.0.0.0/28 mozhe da se razdeli na naj-mnogo
+a) 2 podmrezhi
+b) 3 podmrezhi
+c) 4 podmrezhi
+d) na mozhe da se razdeli na podmrezhi
+
+13. 10.0.0.0/24 sudurzha podmrezhite
+a) 10.0.1.0/25
+b) 10.0.0.0/23
+c) 10.0.1.0/24
+d) 10.0.0.0/25
+e) 10.0.2.0/25
+
+14. komandata "echo 1 > /proc/sys/net/ipv4/ip_forward" pod Linux
+a) aktivira routing podsistemata
+b) spira aktivnija ethernet interface
+c) uvelichava s 1 poslednija oktet ot adresa na hosta
+d) zabranjava IPv6 protokola
+
+15. ako sme v mrezha 10.0.0.0/24 i znaem, che imame router s adres 10.0.0.1 v mrezhata, s koja komanda dobavjame route kum mrezha 192.168.0.0/24
+a) route add -net 192.168.0.0/24 gw 10.0.0.0
+b) route add -net 192.168.0.0/24 gw 10.0.0.1
+c) route add -net 192.168.0.0/24 gw 10.255.255.255
+d) route add -net 192.168.0.0/24 gw 10.0.0.255
+e) route add -net 192.168.255.255/24 gw 10.0.0.1
+
+16. koja ot slednite mrezhi ne e validna v internet
+a) 1.0.0.0/22
+b) 2.0.0.0/24
+c) 172.16.3.0/24
+d) 200.0.0.0/22
+e) 192.169.0.0/16
+
 \end{questions}
 
 %%% Local Variables: 

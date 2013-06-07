@@ -4,6 +4,10 @@
 \usepackage[T2A,T1]{fontenc}
 \usepackage{amssymb,amsmath}
 \usepackage[english,bulgarian]{babel}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usepackage{epstopdf}
+\usepackage{longtable}
 
 \makeatletter
 
@@ -20,7 +24,7 @@
 }
 
 \def\soltable{
-  \begin{tabular}{|c|c||c|c|}
+  \begin{longtable}{|c|c||c|c|}
     \hline
     {\@vqword} & {\@vsolword} & {\@vsword} & {\@vpword} \\
     \hline
@@ -29,7 +33,7 @@
     \@ansloop
 
     \multicolumn{1}{c|}{} & {\@vtword} & & {\numpoints} \\ \cline{2-4}
-  \end{tabular}%
+  \end{longtable}%
 }
 
 \makeatother
