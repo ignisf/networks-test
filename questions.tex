@@ -2,18 +2,13 @@
   \question Напишете най-характерното за работата на един комутатор
   (\foreignlanguage{english}{switch}).
 
-  %\makeemptybox{2cm}
-
-  \question Напишете най-характерното за работата на един маршрутизатор
-  (\foreignlanguage{english}{router}).
-  %\makeemptybox{2cm}
-
   \question Напишете най-малко три разлики между комутатор и маршрутизатор.
-  %\makeemptybox{3cm}
 
   \question Опишете поведението на маршрутизатор в режим на динамична размяна на
   маршрути.
-  %\makeemptybox{3cm}
+
+  \question Каква е същността на оптимизацията за RIP "`Poison Reverse"'? Защо
+  се налага имплементирането ѝ?
 
   \question Опишете IP адресите на интерфейсите и съдържанието на маршрутните
   таблици на трите маршрутизатора, ако те са конфигурирани така, че да има
@@ -58,18 +53,13 @@
 
     \end{tikzpicture}
   \end{center}
-  %\makeemptybox{5cm}
 
   \question Дайте примери за IGP и EGP протоколи за маршрутизация. Напишете
   кратко пояснение за всеки пример.
-  %\makeemptybox{6cm}
 
   \question Какво наричаме мрежова маска?
-  %\makeemptybox{1cm}
 
-  \question Дефинирайте три вида NAT и дайте пример за приложението на всеки от
-  тях.
-  %\makeemptybox{5cm}
+  \question Опишете три недостатъка на NAT.
 
   \question Напишете броя валидни IP адреси за следните IPv4 мрежови маски:
   \begin{itemize}
@@ -79,18 +69,13 @@
     \item \texttt{/17}
   \end{itemize}
 
-  \question Разделете мрежата \texttt{10.2.4.0/22} на 4 подмрежи и напишете
-  адресите и маските на тези мрежи.
-  %\makeemptybox{1cm}
-
   \question Имаме мрежа с 500 хоста. Изберете мрежова маска, която осигурява
-  най-малкото адресно пространство, което да ги побере.
-  %\makeemptybox{1cm}
+  най-малкото адресно пространство, в което те могат да се съберат.
 
   \question Обяснете в какво се състои тристранното ръкостискане
   (\foreignlanguage{english}{three-way handshake}) при TCP.
 
-  \question Имате Linux-базирана система с един мрежови интерфейс, на който е
+  \question Имате Linux-базирана система с един Ethernet интерфейс, на който е
   зададен IP адресът \texttt{192.168.0.2/255.255.255.240}. До какво ще доведе
   изпълнението на командата \texttt{route add -net 10.0.0.0 netmask 255.240.0.0
     gw 192.168.0.16}?
@@ -118,6 +103,31 @@
   разчита на \foreignlanguage{english}{link-state} протокол за маршрутизация? А
   ако е конфигуриран с \foreignlanguage{english}{distance-vector} протокол за
   маршрутизация?
+
+  \question[7] На графиката отдолу са изобразени четири маршрутизатора, които са
+  конфигурирани за динамична маршрутизация с RIP. Ако не са имплементирани
+  оптимизации за алгоритъма на RIP, какво ще бъде разстоянието между A и
+  D след една стъпка от схождането на мрежата. (Приемете, че маршрутизаторите са
+  били изключени до този момент)
+
+  \begin{center}
+    \begin{tikzpicture}[auto,node distance=1.3cm,
+      thick,main node/.style={circle,fill=blue!20,draw,font=\sffamily\Large\bfseries}]
+
+
+      \node[main node] (3) {C};
+      \node[main node] (1) [above left of=3] {A};
+      \node[main node] (2) [above right of=3] {B};
+      \node[main node] (4) [below of=3] {D};
+
+
+      \path[every node/.style={font=\sffamily\small}]
+        (1) edge node {} (3)
+            edge node {} (2)
+        (2) edge node {} (3)
+        (3) edge node {} (4);
+    \end{tikzpicture}
+  \end{center}
 \end{questions}
 
 %%% Local Variables:
